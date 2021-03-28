@@ -1,0 +1,44 @@
+header{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color:white;
+    text-align: center;
+    display:  block;
+    border:white 2px;
+}
+
+body{
+    background-image: url(https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX8326824.jpg);
+    background-repeat: no-repeat;
+    height: 770px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+pre
+{
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+button {
+    
+    border: none;
+    color:black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+  button:hover {
+    background-color: white; /* Green */
+    color:green;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border: 2px solid black;
+  }

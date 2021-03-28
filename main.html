@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FEEDBACK</title>
+        </head>
+        <body>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="./feedback.css">
+            
+
+
+<script>
+          
+          function myFunction() 
+  {
+    var fname = document.getElementById("FIRST NAME").value;
+    var mname= document.getElementById("MIDDLE NAME").value;
+    var lname= document.getElementById("LAST NAME").value;
+    var gender=document.querySelector('input[name="GENDER"]:checked').value;
+    var suggestion=document.getElementById("SUGGESTION").value;
+    var final=document.getElementById("YOUR SUGGESTIONS").value;
+    var fullname
+    if (fname == "")
+    {
+      alert("Please enter your first name");
+    }
+    else if(lname == "")
+    {
+      alert("Please enter your last name");
+    }
+    else if(suggestion == "")
+    {
+      alert("Please enter your suggestions");
+    }
+    else if(fname.length>40||mname.length>40||lname.length>40)
+    {
+      alert("Please enter your name in 40 character");
+    }
+    else{
+   if(mname.trim()==" ")
+         { fullname=gender+" "+fname.trim() +" "+ lname.trim()+" ";
+       }   else
+          {fullname=gender+" "+fname.trim() +" "+ mname.trim() +" "+ lname.trim()+" ";
+      }
+
+    final +="\n"+"Name      :  "+fullname+"\n"+"Suggestion: "+suggestion+"\n";
+
+   document.getElementById("YOUR SUGGESTIONS").innerHTML= final;
+  }}
+
+ 
+
+  function reset()
+  {
+    document.getElementById("FIRST NAME").reset();
+    document.getElementById("MIDDLE NAME").reset();
+    document.getElementById("LAST NAME").reset();
+    document.querySelector('input[name="GENDER"]:checked').checked = false;
+    document.getElementById("SUGGESTION").reset();
+  }
+
+</script>
+              
+<header>
+    <section>
+<pre><b><p style="font-size: 20px; border: solid black 2PX; margin-left: 5%; margin-right: 5%; background-color:rgb(201, 200, 200);">      FEEDBACK                                                                          YOUR THOUGHT MATTER</p>
+</pre>
+</section>
+ </header>
+    <section class="left" >
+      <form action="main.html" onsubmit="return false">
+        <pre><b>
+            <div>
+ <label for="FIRST NAME" >FIRST NAME</label>       <input type="text" name="FIRST NAME" id="FIRST NAME" maxlength="40" placeholder="First" required><br>
+
+ <label for="MIDDLE NAME" >MIDDLE NAME</label>      <input type="text" name="MIDDLE NAME" id="MIDDLE NAME" maxlength="40"><br>
+
+ <label for="LAST NAME" >LAST NAME</label>        <input type="text" name="LAST NAME" id="LAST NAME" maxlength="40" placeholder="Last" required><br>
+
+ <label for="SUGGESTION" >SUGGESTION</label>       <input type="text" name="SUGGESTION" id="SUGGESTION" maxlength="100"><br>
+
+ <label for="gender" >GENDER</label>          <input type="radio" name="GENDER" value="Mr." >MALE </label><input type="radio" name="GENDER" value="Miss." >FEMALE</label>
+  
+
+           <button type="button" onclick="myFunction()">+</button>      <button type="button" onclick="reset()">-</button>
+       </b> </pre></div>
+    </section>
+    <section class ="right">
+      <pre><b>
+        <form action="main.html" onsubmit="return false">
+            <p id="comment">   
+        <label for="YOUR SUGGESTIONS" style="font-family: BELL MT;">YOUR SUGGESTIONS</label><br><br>         
+        <textarea type ="text" name="SUGGESTION" id="YOUR SUGGESTIONS" cols="90" rows="20" style="font-size: 17px; font-family: Georgia, 'Times New Roman', Times, serif;"></textarea>
+      
+    </b></pre></p>
+  
+  
+  </form>
+    </section>
+</section>
+<section class="foot">
+    @COPYRIGHT RESERVED
+   
+</section>
+  
+    
+        
+      
+       
+    
+</body>
+   
+    
+</html>
